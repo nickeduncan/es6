@@ -1,26 +1,26 @@
-// let z = [4, 5, 6];
-// let four = z[0];
-// let five = z[1];
-// console.log(four, five);
+// function cheer() {
+//   console.log("Woohoo!");
+// }
 //
-// let z = [4, 5, 6];
-// let[four, five] = z;
-// console.log(four, five);
+// cheer();
 
-// let animals = ["Simba", "Zazu", "Ed"];
-// let [lion, bird] = animals;
-// console.log(lion, bird);
+// var cheer = function() {
+//   console.log("Woohoo!");
+// }
+//
+// cheer();
 
-// let king = { name: 'Mufasa', kids: 1 };
-// let name = king.name;
-// let kids = king.kids;
-// console.log(name, kids);
+// setTimeout(function() {
+//   console.log("Woohoo!");
+// }, 3000);
 
-// let king = { name: 'Mufasa', kids: 1 };
-// let { name, kids } = king;
-// console.log(name, kids);
+// anonymous by default
+// setTimeout(() => {
+//   console.log("Woohoo!");
+// }, 3000);
 
-let son = { name: 'Simba', parents: 2 };
-let name, parents;
-({ name, parents } = son);
-console.log(name, parents);
+let cheer = () => {
+  console.log("Woohoo!");
+}
+
+cheer();
