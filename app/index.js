@@ -1,23 +1,11 @@
-// const addToCart = (item, number) => {
-//   return Number, isFinite(number);
-// }
-//
-// console.log(addToCart('shirt', 5));
+// import { fellowship, total } from './fellowship';
+// console.log(fellowship);
 
-// const addToCart = (item, number) => {
-//   return Number, isFinite(number);
-// }
-//
-// console.log(addToCart('shirt', Infinity));
+// import { add, multiply } from './math';
+// console.log(add(5, 10));
 
-// const addToCart = (item, number) => {
-//   return Number, isFinite(number);
-// }
-//
-// console.log(addToCart('shirt', Math.pow(2, 54)));
+// import { add, multiply } from './math';
+// console.log(multiply(5, 10));
 
-const addToCart = (item, number) => {
-  return Number.isSafeInteger(number);
-}
-
-console.log(addToCart('shirt', Math.pow(2, 54)));
+import multiply from './math';
+console.log(multiply(5, 10));
