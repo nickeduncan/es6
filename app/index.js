@@ -1,26 +1,24 @@
-// function cheer() {
-//   console.log("Woohoo!");
+// let values = [20, 30, 40];
+//
+// let double = (n) => {
+//   return n*2;
 // }
 //
-// cheer();
+// let doubled = values.map(double);
+// console.log(doubled);
 
-// var cheer = function() {
-//   console.log("Woohoo!");
-// }
+
+
+// let values = [20, 30, 40];
 //
-// cheer();
+// let doubled = values.map((n) => {
+//   return n*2;
+// });
+// console.log(doubled);
 
-// setTimeout(function() {
-//   console.log("Woohoo!");
-// }, 3000);
 
-// anonymous by default
-// setTimeout(() => {
-//   console.log("Woohoo!");
-// }, 3000);
 
-let cheer = () => {
-  console.log("Woohoo!");
-}
+let values = [20, 30, 40];
 
-cheer();
+let doubled = values.map((n) => n*2);
+console.log(doubled);
