@@ -1,12 +1,3 @@
-function hello() {
-  let message = "Hello!";
-  console.log(message);
-}
-
-function greeting() {
-  let message = "How are you?"
-  console.log(message);
-}
-
-hello();
-greeting();
+let b = 'birthday'
+let c = `Happy ${b}`;
+console.log(c);
