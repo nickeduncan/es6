@@ -1,23 +1,31 @@
-// let a = new Set();
-// a.add(5);
-// a.add(43);
-// a.add("Woohoo");
-// a.add({x: 50, y: 200});
-// // console.log(a);
+// let a = new Map();
+// let key_1 = "string key";
+// let key_2 = { a: 'key'};
+// let key_3 = function() {};
 //
-// // console.log(a.size);
-//
-// console.log(a.has(7));
+// a.set(key_1, 'return value for a string key');
+// a.set(key_2, 'return value for an object key');
+// a.set(key_3, 'return value for a function key');
+// console.log(a);
 
-// let numbers = [5, 7, 8, 13, 17];
-// let numSet = new Set(numbers);
-// // console.log(numSet);
+// let numArr = [[1, 'one'], [2, 'two'], [3, 'three']];
+// let valMap = new Map(numArr);
+// // console.log(valMap);
 //
-// for (let element of numSet.values()) {
-//   console.log(element);
+// for (let [key, value] of valMap.entries()) {
+//   console.log(`${key} points to ${value}`);
 // }
 
-let chars = 'asdklfjlkasjdflkjasdlkfjdlkasdflkjweoe'
-let chars_arr = chars.split("");
-let chars_set = new Set(chars_arr);
-console.log(chars_set);
+let string = 'asldfjweoqpieworasasdlkjweoinxcvnm';
+
+let letters = new Map();
+for (let i=0; i<string.length; i++) {
+  let letter = string[i];
+  if (!letters.has(letter)) {
+    letters.set(letter, 1);
+  } else {
+    letters.set(letter, letters.get(letter) + 1);
+  }
+}
+
+console.log(letters);
