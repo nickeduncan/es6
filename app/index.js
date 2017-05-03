@@ -1,20 +1,33 @@
-// let call = () => {
-//   let secret = 'ES6 rocks!';
-//   let reveal = () => {
-//     console.log(secret);
+// const addSuffix = (x) => {
+//   const concat = (y) => {
+//     return y+ x;
 //   }
-//   reveal();
+//   return concat;
 // }
 //
-// call();
+// // let add_ness = addSuffix("ness");
+// // console.log(add_ness);
+// // let h = add_ness("happi");
+// // console.log(h);
+//
+// let add_ful = addSuffix("ful");
+// let f = add_ful("fruit");
+// console.log(f);
 
-let call = () => {
-  let secret = 'ES6 rocks!';
-  let reveal = () => {
-    console.log(secret);
-  }
-  return reveal;
-}
+// const product = (x) => {
+//   return y => {
+//     return y * x;
+//   }
+// }
+//
+// let mult5 = product(5);
+// // console.log(mult5(3));
+// let double = product(2);
+// console.log(double(9));
 
-let unveil = call();
-unveil();
+const product = x => y => y * x;
+
+let mult5 = product(5);
+// console.log(mult5(3));
+let double = product(2);
+console.log(double(9));
