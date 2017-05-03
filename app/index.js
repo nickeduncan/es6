@@ -1,11 +1,14 @@
-// import { fellowship, total } from './fellowship';
-// console.log(fellowship);
+class Animal {
+  constructor(name, height) {
+    this.name = name;
+    this.height = height;
+  }
 
-// import { add, multiply } from './math';
-// console.log(add(5, 10));
+  hello() {
+    console.log(`Hi! I'm ${this.name} from the Animal kingdom`);
+  }
+}
 
-// import { add, multiply } from './math';
-// console.log(multiply(5, 10));
+let king = new Animal("Mufasa", 4.5);
 
-import multiply from './math';
-console.log(multiply(5, 10));
+king.hello();
