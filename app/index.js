@@ -1,14 +1,23 @@
-// let b = "woo" + "oo".repeat(50);
-// console.log(b);
+// const addToCart = (item, number) => {
+//   return Number, isFinite(number);
+// }
+//
+// console.log(addToCart('shirt', 5));
 
-// let b = "woo" + " ".repeat(50) + "oo";
-// console.log(b);
+// const addToCart = (item, number) => {
+//   return Number, isFinite(number);
+// }
+//
+// console.log(addToCart('shirt', Infinity));
 
-let b = `woo${"oo".repeat(50)}`;
-console.log(b);
+// const addToCart = (item, number) => {
+//   return Number, isFinite(number);
+// }
+//
+// console.log(addToCart('shirt', Math.pow(2, 54)));
 
-console.log("butterfly".startsWith("butt"));
+const addToCart = (item, number) => {
+  return Number.isSafeInteger(number);
+}
 
-console.log("butterfly".endsWith("fly"));
-
-console.log("butterfly".includes("tt"));
+console.log(addToCart('shirt', Math.pow(2, 54)));
