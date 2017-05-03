@@ -1,15 +1,24 @@
-class Calculator {
-  static multiply(a, b) {
-    return a*b;
-  }
+function Wizard(name, house, pet) {
+  this.name = name;
+  this.house = house;
+  this.pet = pet;
 
-  static add(a, b) {
-    return a+b;
-  }
+  this.greet = () => `I'm ${this.name} from ${this.house}`;
 }
 
-// let a = Calculator.multiply(5, 7);
-// console.log(a);
+Wizard.prototype.pet_name;
 
-let a = Calculator.add(5, 7);
-console.log(a);
+// Wizard.prototype.info = () => {
+//   return `I have a ${this.pet} named ${this.pet_name}`;
+// }
+
+// Need function keyword to access prototype's "this"
+Wizard.prototype.info = function() {
+  return `I have a ${this.pet} named ${this.pet_name}`;
+}
+
+let harry = new Wizard("Harry Potter", "Gryffindor", "Owl");
+harry.pet_name = "Hedwig";
+console.log(harry);
+// console.log(harry.greet());
+console.log(harry.info());
