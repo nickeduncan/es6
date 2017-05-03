@@ -1,3 +1,5 @@
-let b = 'birthday'
-let c = `Happy ${b}`;
-console.log(c);
+function collect(...a) {
+  console.log(a);
+}
+
+collect(3, 6, 9, 12, 15);
