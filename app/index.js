@@ -1,31 +1,15 @@
-import Animal from './Animal.js';
-
-// class Animal {
-//   constructor(name, height) {
-//     this.name = name;
-//     this.height = height;
-//   }
-//
-//   hello() {
-//     console.log(`Hi! I'm ${this.name} from the Animal kingdom`);
-//   }
-// }
-
-// let king = new Animal("Mufasa", 4.5);
-// // console.log(king);
-// king.hello();
-
-class Lion extends Animal {
-  constructor(name, height, color) {
-    super(name, height);
-    this.color = color;
+class Calculator {
+  static multiply(a, b) {
+    return a*b;
   }
 
-  hello() {
-    console.log(`Hi! I'm ${this.name} from Pride Rock!`);
+  static add(a, b) {
+    return a+b;
   }
 }
 
-let son = new Lion("Simba", 2, "golden");
-// console.log(son);
-son.hello();
+// let a = Calculator.multiply(5, 7);
+// console.log(a);
+
+let a = Calculator.add(5, 7);
+console.log(a);
