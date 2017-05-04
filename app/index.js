@@ -1,49 +1,28 @@
-// const arrayIterator = (array) => {
-//   let index = 0;
+// let p = new Promise((resolve, reject) => {
+//   resolve('Resolved promise data');
+// })
 //
-//   return {
-//     next: () => {
-//       if (index < array.length) {
-//         let next = array[index];
-//         index += 1;
-//         return next;
-//       }
-//     }
-//   }
-// }
+// p.then(response => console.log(response));
+
+// let p = new Promise((resolve, reject) => {
+//   reject('Rejected promise data');
+// })
 //
+// p.then(response => console.log(response))
+//   .catch(error => console.log(error));
 
-// let it = arrayIterator([1, 2, 3]);
-// console.log(it.next());
-// console.log(it.next());
-// console.log(it.next());
-// console.log(it.next());
-
-
-
-// function* arrayIterator() {
-//   yield arguments;
-// }
+// let p = new Promise((resolve, reject) => {
+//   setTimeout(() => resolve('Resolved promise data'), 3000);
+// })
 //
-// var it = arrayIterator(1, 2, 3);
-// console.log(it.next().value);
+// p.then(response => console.log(response))
+//   .catch(error => console.log(error));
 
-// function* arrayIterator() {
-//   for (let arg of arguments) {
-//     yield arg;
-//   }
-// }
-//
-// var it = arrayIterator(1, 2, 3);
-// console.log(it.next().value);
-// console.log(it.next().value);
-// console.log(it.next().value);
+let p = new Promise((resolve, reject) => {
+  setTimeout(() => resolve('Resolved promise data'), 3000);
+})
 
-function* arrayIterator() {
-    yield* arguments;
-}
+p.then(response => console.log(response))
+  .catch(error => console.log(error));
 
-var it = arrayIterator(1, 2, 3);
-console.log(it.next().value);
-console.log(it.next().value);
-console.log(it.next().value);
+console.log('after promise consumption');
