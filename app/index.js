@@ -1,28 +1,16 @@
-// let p = new Promise((resolve, reject) => {
-//   resolve('Resolved promise data');
-// })
+// const root = 'https://jsonplaceholder.typicode.com/posts/1'
 //
-// p.then(response => console.log(response));
+// fetch(root, { method: "GET"} )
+//   .then(response => console.log(response))
 
-// let p = new Promise((resolve, reject) => {
-//   reject('Rejected promise data');
-// })
+// const root = 'https://jsonplaceholder.typicode.com/posts/1'
 //
-// p.then(response => console.log(response))
-//   .catch(error => console.log(error));
+// fetch(root, { method: "GET"} )
+//   .then(response => response.json())
+//   .then(json => console.log(json));
 
-// let p = new Promise((resolve, reject) => {
-//   setTimeout(() => resolve('Resolved promise data'), 3000);
-// })
-//
-// p.then(response => console.log(response))
-//   .catch(error => console.log(error));
+  const root = 'https://www.googleapis.com/books/v1/volumes?q=isbn:0747532699';
 
-let p = new Promise((resolve, reject) => {
-  setTimeout(() => resolve('Resolved promise data'), 3000);
-})
-
-p.then(response => console.log(response))
-  .catch(error => console.log(error));
-
-console.log('after promise consumption');
+  fetch(root, { method: "GET"} )
+    .then(response => response.json())
+    .then(json => console.log(json));
