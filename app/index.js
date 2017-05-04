@@ -1,16 +1,31 @@
-// const root = 'https://jsonplaceholder.typicode.com/posts/1'
-//
-// fetch(root, { method: "GET"} )
-//   .then(response => console.log(response))
+// let a = Math.pow(2, 5);
+// console.log(a);
 
-// const root = 'https://jsonplaceholder.typicode.com/posts/1'
-//
-// fetch(root, { method: "GET"} )
-//   .then(response => response.json())
-//   .then(json => console.log(json));
+// let a = 2**5;
+// console.log(a);
 
-  const root = 'https://www.googleapis.com/books/v1/volumes?q=isbn:0747532699';
+// let b = "wonderful".includes("wonder");
+// console.log(b);
+// let b = "wonderful".includes("butter");
+// console.log(b);
 
-  fetch(root, { method: "GET"} )
-    .then(response => response.json())
-    .then(json => console.log(json));
+// let b = [2, 3, 4, 5, 6].includes(7);
+// console.log(b);
+
+
+
+// let obj = {a: 'one', b: 'two', c: 'three'};
+// let keys = Object.keys(obj);
+// console.log(keys);
+
+// let obj = {a: 'one', b: 'two', c: 'three'};
+// let values = Object.values(obj);
+// console.log(values);
+
+let obj = {a: 'one', b: 'two', c: 'three'};
+let entries = Object.entries(obj);
+// console.log(entries);
+
+for (let entry of entries) {
+  console.log(`key: ${entry[0]}, value: ${entry[1]}`);
+}
