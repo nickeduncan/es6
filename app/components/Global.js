@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { FormGroup, FormControl, InputGroup, Glyphicon } from 'react-bootstrap';
+import Gallery from './Gallery';
 
 // class Global extends Component {
 //   render() {
@@ -13,16 +14,20 @@ class Global extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      query: ''
+      query: '',
+      items: []
     }
   }
 
   search() {
     const BASE_URL = `http://www.googleapis.com/books/v1/volumes?q=`;
     // console.log('search', this.state.query);
-    fetch(`${BASE_URL}${this.state.query}`, { method: 'GET'})
+    fetch(`${BASE_URL}${this.state.query}&key=AIzaSyAOn32a__11gFOcuRpBdF81tBoGB8SuYCc`, { method: 'GET'})
       .then(response => response.json())
-      .then(json => console.log(json));
+      .then(json => {
+        let { items } = json;
+        this.setState({items})
+      });
   }
 
   render() {
@@ -46,6 +51,7 @@ class Global extends Component {
             </InputGroup.Addon>
           </InputGroup>
         </FormGroup>
+        <Gallery item={this.state.items}/>
       </div>
     )
   }
