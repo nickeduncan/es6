@@ -18,7 +18,7 @@ class Global extends Component {
   }
 
   search() {
-    const BASE_URL = 'http://www.googleapis.com/books/v1/volumes?q='
+    const BASE_URL = `http://www.googleapis.com/books/v1/volumes?q=`;
     // console.log('search', this.state.query);
     fetch(`${BASE_URL}${this.state.query}`, { method: 'GET'})
       .then(response => response.json())
@@ -37,7 +37,7 @@ class Global extends Component {
               onChange={event => this.setState({query: event.target.value})}
               onKeyPress={event => {
                 if (event.key === 'Enter') {
-                  this.search();
+                  this.search()
                 }
               }}
             />
