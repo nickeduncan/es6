@@ -18,7 +18,11 @@ class Global extends Component {
   }
 
   search() {
-    console.log('search', this.state.query);
+    const BASE_URL = 'http://www.googleapis.com/books/v1/volumes?q='
+    // console.log('search', this.state.query);
+    fetch(`${BASE_URL}${this.state.query}`, { method: 'GET'})
+      .then(response => response.json())
+      .then(json => console.log(json));
   }
 
   render() {
