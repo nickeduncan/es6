@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 class Gallery extends Component {
   render() {
+    let alternate = 'https://cdn0.iconfinder.com/data/icons/thin-photography/57/thin-367_photo_image_wall_unavailable_missing-512.png';
+
     return (
       <div>
       {
@@ -19,10 +21,10 @@ class Gallery extends Component {
                 alt="book image"
                 className="book-image"
               />
-            </div>
-            <div className="book-text">
-              {title}
-            </div>
+              <div className="book-text">
+                {title}
+              </div>
+            </a>
           )
         })
       }

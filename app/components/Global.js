@@ -20,11 +20,14 @@ class Global extends Component {
   }
 
   search() {
-    const BASE_URL = `http://www.googleapis.com/books/v1/volumes?q=`;
+    const BASE_URL = `https://www.googleapis.com/books/v1/volumes?q=`;
     // console.log('search', this.state.query);
-    fetch(`${BASE_URL}${this.state.query}&key=AIzaSyAOn32a__11gFOcuRpBdF81tBoGB8SuYCc`, { method: 'GET'})
+    fetch(`${BASE_URL}${this.state.query}`, {
+      method: 'GET'
+    })
       .then(response => response.json())
       .then(json => {
+        console.log('book items', json);
         let { items } = json;
         this.setState({items})
       });
@@ -33,7 +36,7 @@ class Global extends Component {
   render() {
     return (
       <div className="Global">
-        <h2>Book Explorer!</h2>
+        <h2 className="title">Book Explorer</h2>
         <FormGroup>
           <InputGroup>
             <FormControl
